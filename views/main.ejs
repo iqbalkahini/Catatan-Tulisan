@@ -1,0 +1,26 @@
+
+    
+<%- include("layouts/sidebar") %>
+
+<!-- Cards -->
+<div class="cards">
+    <% catatan.forEach(value => { %>
+        <div class="card">
+            <h3 class="card__title">
+                <%= value.title %>
+            </h3>
+            <p class="card__content"><%= value.description %></p>
+            <div class="card__date">
+                <%= tgl %>
+            </div>
+            <div class="btn-card">
+                <a href="/ubah/<%= value._id %>">
+                    Ubah
+                </a>
+                <a href="/delete/<%= value._id %>">
+                    Delete
+                </a>
+            </div>
+        </div> 
+    <% }); %>
+</div>

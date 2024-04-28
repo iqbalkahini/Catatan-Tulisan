@@ -1,0 +1,243 @@
+/* My Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Special+Elite&display=swap");
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 5rem;
+  margin-left: 250px;
+}
+
+.card {
+  --border-radius: 0.75rem;
+  --primary-color: #7257fa;
+  --secondary-color: #3c3852;
+  width: 220px;
+  height: 220px;
+  font-family: "Arial";
+  padding: 0.3rem 1rem;
+  border-radius: var(--border-radius);
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  margin: 1rem 1.5rem;
+}
+
+.card > * + * {
+  margin-top: 1.1em;
+}
+
+.card .card__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1.5rem 0rem;
+}
+
+.card .card__content {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 700;
+  overflow-y: auto;
+  min-height: 20px;
+  max-height: 20px;
+}
+
+.card .card__date {
+  color: #6e6b80;
+  font-size: 0.8rem;
+}
+
+.cards .card .btn-card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cards .card .btn-card a {
+  color: #090909;
+  padding: 0.5em 1.5em;
+  font-size: 15px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+.cards .card a:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.cards .card .btn-card a:nth-child(2) {
+  background-color: #e72929;
+}
+
+/* sidebar */
+.sidebar {
+  width: 250px; /* Sesuaikan dengan kebutuhan Anda */
+  height: 100vh;
+  background-color: #800020; /* Warna latar belakang */
+  color: #fff; /* Warna teks */
+  position: fixed;
+}
+
+.sidebar h2 {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.content-sidebar {
+  margin: 1rem;
+}
+
+.home,
+.add {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.sidebar .content-sidebar .home a,
+.sidebar .content-sidebar .add a {
+  color: black;
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.sidebar .content-sidebar .home a span,
+.sidebar .content-sidebar .add a span {
+  color: #fff;
+}
+
+/* Form */
+.container-form form {
+  min-height: 100vh;
+  max-height: 140vh;
+  background-color: #0093e9;
+  background-image: linear-gradient(246deg, #0093e9 0%, #80d0c7 100%);
+  border: 1px solid;
+}
+
+.container-form form .judul {
+  width: 80%;
+  max-width: 800px;
+  margin: 1.7rem auto;
+}
+
+.container-form form .deskripsi {
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Menyusun elemen dalam kolom */
+  width: 80%;
+  margin: 0 auto;
+  max-height: 700px;
+}
+
+.container-form form .judul label,
+.container-form form .deskripsi label {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+}
+
+.container-form form .judul input {
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 0.75rem 0.75rem;
+  transition: 0.15s ease;
+  font-size: 1.5rem;
+}
+.container-form form .deskripsi textarea {
+  font-size: 1.2rem;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.container-form form .judul input:focus,
+.container-form form .deskripsi textarea:focus {
+  outline: none;
+  border-color: #007dab;
+  box-shadow: 0 0 0 1px #007dab, 0 0 0 4px rgba(0, 125, 171, 0.25);
+}
+
+.container-form form button {
+  display: block;
+  margin: 2rem auto;
+  background-color: #007dab;
+  width: 40%;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Form-Button */
+.container-form button {
+  outline: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 140px;
+  min-height: 50px;
+  border-radius: 0.5em;
+  box-shadow: 0 0.625em 1em 0 rgba(30, 143, 255, 0.35);
+  overflow: hidden;
+}
+
+.container-form button div {
+  transform: translateY(0px);
+  width: 140px;
+}
+
+.container-form button,
+.container-form button div {
+  transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.container-form button div span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0.75em 1.125em;
+}
+
+.container-form button div:nth-child(1) {
+  background-color: #1e90ff;
+}
+
+.container-form button div:nth-child(2) {
+  background-color: #21dc62;
+}
+
+.container-form button:focus {
+  box-shadow: 0 0.625em 1em 0 rgba(33, 220, 98, 0.35);
+}
+
+.container-form button:focus div {
+  transform: translateY(-50px);
+}
+
+.container-form button p {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.container-form button:focus {
+  transform: scale(0.95);
+}
