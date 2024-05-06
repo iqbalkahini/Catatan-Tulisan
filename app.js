@@ -21,7 +21,7 @@ mongoose
 
 // midleware sendiri
 const requestTime = (req, res, next) => {
-  req.requestTime = moment().format('ll');
+  req.requestTime = moment().format("ll");
   next();
 };
 
@@ -52,6 +52,7 @@ app.get("/ubah/:_id", async (req, res) => {
     title: "Catatan",
     layout: "layouts/main-layouts",
     catatan: findOne,
+    tgl: req.requestTime,
   });
 });
 
@@ -59,13 +60,13 @@ app.post("/ubah/:id", async (req, res) => {
   const _id = { _id: req.params.id };
   await updateCatatan(_id, req.body);
   res.redirect("/");
-  console.log(_id);
 });
 
 app.get("/tambah", (req, res) => {
   res.render("tambah", {
     title: "Catatan",
     layout: "layouts/main-layouts",
+    tgl: req.requestTime,
   });
 });
 

@@ -5,6 +5,7 @@ const skemaCatatan = new Schema(
   {
     title: String,
     description: String,
+    tgl: String,
   },
   {
     statics: {
